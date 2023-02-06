@@ -1,13 +1,3 @@
-#
-# 計算機科学実験及演習 4「音響信号処理」
-# サンプルソースコード
-#
-# 音声ファイルを読み込みスペクトログラムを表示する
-# その隣に時間を選択するスライドバーと選択した時間に対応したスペクトルを表示する
-# GUIのツールとしてTkinterを使用する
-#
-
-# ライブラリの読み込み
 import librosa
 import numpy as np
 import matplotlib.pyplot as plt
@@ -262,15 +252,6 @@ def guidayo(filename):
     ax13.set_xlim(0, duration)
     ax13.plot(x_data, sikibetu)
     canvas.get_tk_widget().pack(side="left")	# 最後にFrameに追加する処理
-
-
-	# fig3, ax3 = plt.subplots()
-	# canvas3 = FigureCanvasTkAgg(fig3, master=frame3)	# masterに対象とするframeを指定
-	# plt.xlabel('time')
-	# plt.ylabel('frequency [Hz]')
-	# plt.ylim(0, 500)
-	# plt.plot(basics)
-	# canvas3.get_tk_widget().pack(side="left")	# 最後にFrameに追加する処理
 
 	# スライドバーの値が変更されたときに呼び出されるコールバック関数
 	# ここで右側のグラフに
